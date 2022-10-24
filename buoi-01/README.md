@@ -12,10 +12,7 @@
 
 - Tạo tài khoản github
 - Tạo profile với https://gprm.itsvg.in/
-- Tạo repository cho bootcamp note
-- Tạo repository cho bootcamp code
-- Tạo repository cho my note
-- Tạo repository cho my code
+- Tạo repository cho bootcamp
 
 ## Nội dung bài học
 
@@ -63,7 +60,7 @@
 />
 ```
 
-- tittle: Đặt tên cho title
+- title: Đặt tên cho title
 
 ```html
 <title>Kenh14</title>
@@ -118,3 +115,14 @@ h1 {
   line-height: 30px;
 }
 ```
+
+### Shortcut
+
+|            | Description             |
+| ---------- | ----------------------- |
+| Ctrl + /   | Comment the content     |
+| Ctrl + C   | Copy content            |
+| Ctrl + P   | Paste content           |
+| Ctrl + ↑/↓ | Scroll line up/down     |
+| Ctrl + P   | Paste content           |
+| Ctrl + D   | Select multiple content |
