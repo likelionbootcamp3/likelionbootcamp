@@ -1,16 +1,56 @@
 div {
   width: 700px;
-  height: 500px;
 }
 
-h2 {
+h2,
+h3 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 45px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   line-height: 1;
   font-weight: 500;
 }
 
+h2 {
+  font-size: 45px;
+}
+
+h3 {
+  font-size: 30px;
+}
 p {
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.5;
+}
+/* 
+div > h2 {
+  color: red;
+}
+
+div:first-child h2 {
+  color: green;
+} */
+
+/* [class="title"] {
+  color: red;
+} */
+
+/* h2 {
+  color: red;
+}
+
+.title {
+  color: blue;
+}
+
+h3.title {
+  color: orange;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: red;
 }
