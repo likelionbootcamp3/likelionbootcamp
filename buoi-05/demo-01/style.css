@@ -1,0 +1,22 @@
+.box-0 {
+  height: 200px;
+  background-color: #ccc;
+}
+
+.box-1 {
+  height: 100px;
+  background-color: blue;
+
+  position: sticky;
+  top: 0;
+}
+
+.box-2 {
+  height: 1000px;
+  background-color: #ccc;
+}
+
+.box-3 {
+  height: 1000px;
+  background-color: #999;
+}
