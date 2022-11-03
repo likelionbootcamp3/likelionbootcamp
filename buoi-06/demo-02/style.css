@@ -1,0 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px 40px;
+  /* row-gap: 8px;
+  column-gap: 40px; */
+}
+
+.grid-item {
+  font-size: 40px;
+  border: 1px solid #ccc;
+  padding: 50px;
+  background-color: orange;
+}
