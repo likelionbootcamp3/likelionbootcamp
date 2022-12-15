@@ -195,7 +195,7 @@ const RadioButtons = ({ options, name }) => {
       <div>
         {options.map((item) => {
           return (
-            <div>
+            <div key={item.value}>
               <input
                 type="radio"
                 name={name}
@@ -214,6 +214,44 @@ const RadioButtons = ({ options, name }) => {
   );
 };
 
+const Checkboxes = ({ options }) => {
+  const [choices, setChoices] = useState([]);
+
+  const handleChoices = (e) => {
+    if (e.target.checked) {
+      setChoices([...choices, e.target.value]);
+    } else {
+      setChoices(choices.filter((item) => item !== e.target.value));
+    }
+  };
+
+  return (
+    <div>
+      {/* Checkboxes */}
+      <div>
+        {options.map((item) => {
+          return (
+            <div key={item.value}>
+              <input
+                type="checkbox"
+                value={item.value}
+                onChange={handleChoices}
+              />
+              <label>{item.label}</label>
+            </div>
+          );
+        })}
+      </div>
+      {/* Results */}
+      <div>
+        {choices.map((item) => (
+          <p key={item}>{item}</p>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default function App() {
   return (
     <div>
@@ -221,6 +259,8 @@ export default function App() {
       <Select options={suzeOptions} />
       <RadioButtons options={categoryOptions} name="clothes" />
       <RadioButtons options={suzeOptions} name="size" />
+      <Checkboxes options={categoryOptions} />
+      <Checkboxes options={suzeOptions} />
     </div>
   );
 }
