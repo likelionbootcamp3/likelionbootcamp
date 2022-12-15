@@ -14,7 +14,7 @@ const ProductCard = ({ title, imageUrl, price, category }) => {
       <div className="flex flex-col gap-3 px-3 pt-3 pb-1.5">
         <h5>{title}</h5>
         <div className="flex items-center justify-between">
-          <p>{price}</p>
+          <p>${price}</p>
           <p>{category}</p>
         </div>
       </div>
@@ -29,17 +29,21 @@ const ProductGrid = ({ products }) => {
       <div className="mx-auto max-w-screen-xl px-4">
         {/* Layout */}
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {products.map((item) => {
-            return (
-              <ProductCard
-                key={item.id}
-                title={item.title}
-                imageUrl={item.thumbnail}
-                price={item.price}
-                category={item.category}
-              />
-            );
-          })}
+          {products.length <= 0 ? (
+            <p>No items found</p>
+          ) : (
+            products.map((item) => {
+              return (
+                <ProductCard
+                  key={item.id}
+                  title={item.title}
+                  imageUrl={item.thumbnail}
+                  price={item.price}
+                  category={item.category}
+                />
+              );
+            })
+          )}
         </div>
       </div>
     </div>
