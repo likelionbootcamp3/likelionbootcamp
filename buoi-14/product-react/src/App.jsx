@@ -1,13 +1,26 @@
 import { useState } from "react";
 import ProductFilter from "./components/ProductFilter";
 import ProductGrid from "./components/ProductGrid";
-import { data } from "./data";
+// import { data } from "./data";
 
 export default function App() {
   const [category, setCategory] = useState("default");
   const [priceRanges, setPriceRanges] = useState([]);
 
-  const filteredProducts = data.products
+  const [products, setProducts] = useState(null);
+
+  // Fetch products data
+  fetch("https://dummyjson.com/products")
+    .then((res) => res.json())
+    .then((data) => {
+      // products = data.products;
+      setProducts(data.products);
+      console.log(data.products);
+    });
+
+  if (!products) return <o>Product is fetching...</o>;
+
+  const filteredProducts = products
     .filter((item) => {
       return item.category === category || category === "default";
     })
